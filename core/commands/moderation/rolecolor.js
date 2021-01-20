@@ -1,4 +1,3 @@
-const db = require('quick.db');
 const color = require('color-processing-library')
 
 exports.launch = (client, message, args) => {

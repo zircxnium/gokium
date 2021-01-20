@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 exports.launch = (client, message, args) => {
   const user = message.mentions.users.first();
-  if (!user && args[1] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
+  if (!user && args[0] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
   if (!user) return message.reply('faut peut-être me mentionner l\'utilisateur, tu penses pas ? :)');
 
   fetch("https://some-random-api.ml/animu/pat")

@@ -6,7 +6,7 @@ exports.launch = (client, message, args) => {
   const loveIndex = Math.floor(love / 10);
   const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
 
-  if (!user && args[1] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user; 
+  if (!user && args[0] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user; 
   if (!user) return message.reply('faut peut-être me mentionner l\'utilisateur, tu penses pas ? :)');
 
   const embed = new MessageEmbed()

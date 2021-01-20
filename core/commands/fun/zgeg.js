@@ -5,7 +5,7 @@ exports.launch = (client, message, args) => {
   const zgeg = Math.random() * 100;
   const zgegIndex = Math.floor(zgeg / 10);
   const zgegLevel = "=".repeat(zgegIndex);
-  if (!user && args[1] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
+  if (!user && args[0] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
   if (!user) user = message.author;
 
   const embed = new MessageEmbed()

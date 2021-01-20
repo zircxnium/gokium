@@ -6,7 +6,7 @@ exports.launch = (client, message, args) => {
   const gayIndex = Math.floor(gay / 10);
   const gayLevel = "🏳️‍🌈".repeat(gayIndex) + "-".repeat(10 - gayIndex);
 
-  if (!user && args[1] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
+  if (!user && args[0] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
   if (user.id === "587053234636455946" || user.id === "686244356394451041") gay = 0.080916978573513;
 
   const embed = new MessageEmbed()

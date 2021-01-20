@@ -1,0 +1,1 @@
+exports.run = (client, error, shard) => console.error(error); // to improve

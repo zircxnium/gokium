@@ -32,20 +32,20 @@ exports.launch = (client, message, args) => {
     }
   }
 
-  const hasRole = toMute.roles.cache.has(muteRole.id);
+  const hasRole = member.roles.cache.has(muteRole.id);
   if (hasRole) return message.channel.send(`Cet utilisateur est déjà mute.`);
   
-  toMute.roles.add(muteRole.id).then(() => {
+  member.roles.add(muteRole.id).then(() => {
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${toMute.user.tag}__ à été mute`, toMute.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(`__${member.user.tag}__ à été mute`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
       .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     if (reason)
       embed.setDescription(`**Raison:** ${reason}`);
 
-    if (!toMute.bot) toMute.send(`T'as été mute de **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**Raison:** ${reason}` : ""}`);
+    if (!member.bot) member.send(`T'as été mute de **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**Raison:** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   })
 }

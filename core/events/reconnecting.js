@@ -1,0 +1,1 @@
+exports.run = (client, shard) => console.log(`reconnecting..`); // to improve

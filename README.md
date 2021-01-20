@@ -8,3 +8,7 @@ This project is not ready at all. It's still in development and not ready-to-use
 ```
 TOKEN=mybottoken
 ```
+
+## TO-DO
+- Locales (multi-languages)
+- CSS images

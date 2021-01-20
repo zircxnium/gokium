@@ -3,7 +3,7 @@ const db = require('quick.db');
 exports.launch = (client, message, args) => {
   if (!message.member.hasPermission('ADMINISTRATOR')) return;
   
-  const logsChannel = args[0];
+  const logsChannel = args[0].replace(/<|#|>/g, '');
   if (!logsChannel) {
     if (db.get(`logs_${message.guild.id}`)) {
       message.delete().then(() => {
@@ -15,7 +15,6 @@ exports.launch = (client, message, args) => {
     return;
   }
 
-  if (logsChannel.includes('#')) logsChannel = logsChannel.replace(/<|#|>/g, '');
   if (!message.guild.channels.cache.has(logsChannel)) return message.reply('ce channel n\'existe pas..');
 
   db.set(`logs_${message.guild.id}`, logsChannel);

@@ -18,7 +18,7 @@ exports.launch = (client, message, args) => {
       .addField("**Morts**", `${utils.formatString(body.deaths.value)}`, true)
       .addField("**Dernière update**", `${body.lastUpdate.replace(/.000Z|.648Z|T/gi, " ")}`, true)
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
   
     return message.channel.send(embed);
   });

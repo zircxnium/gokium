@@ -10,11 +10,11 @@ exports.launch = (client, message, args) => {
   if (!user) return message.reply('faut peut-être me mentionner l\'utilisateur, tu penses pas ? :)');
 
   const embed = new MessageEmbed()
-    .setColor("#ffb6c1")
+    .setColor(0x2F3136)
     .setDescription(`💟 **${message.author.username}** aime **${user.username}** à :`)
     .addField(`💞 **${Math.floor(love)}%**`, `\n\n${loveLevel}`)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
 }

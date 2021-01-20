@@ -3,6 +3,6 @@ exports.launch = (client, message, args) => {
 }
 
 exports.commands = {
-  description: "Envoie l'invitation pour le bot `Gokium`.",
+  description: "Envoie l'invitation pour le bot `gokium`.",
   use: "botinvite"
 }

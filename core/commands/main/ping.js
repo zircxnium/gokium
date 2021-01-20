@@ -8,7 +8,7 @@ exports.launch = (client, message, args) => {
     .setDescription(`API Latency: **${Math.round(client.ws.ping)}ms**\nBot Latency: **${(new Date()).getTime() - time}ms**`)
     .setImage(body.link)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
 
   return message.channel.send(embed);

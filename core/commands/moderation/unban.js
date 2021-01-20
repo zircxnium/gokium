@@ -16,7 +16,7 @@ exports.launch = (client, message, args) => {
       .setColor(0x2F3136)
       .setAuthor(`__${banHandle.user.tag}__ à été unban`, banHandle.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     if (reason)
       embed.setDescription(`**Raison:** ${reason}`);

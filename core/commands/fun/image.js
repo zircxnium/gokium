@@ -13,7 +13,7 @@ exports.launch = (client, message, args) => {
       .setAuthor(`${message.author.username}`, message.author.displayAvatarURL({format: "png" || "gif"}))
       .setImage(body[result].download_url)
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     return message.channel.send(embed);
   })

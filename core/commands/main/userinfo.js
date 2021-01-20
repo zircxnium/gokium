@@ -24,7 +24,7 @@ exports.launch = (client, message, args) => {
     .addField("**Création**", `${member.user.createdAt.toUTCString().substr(0, 16)} (${checkDays(user.createdAt)})`, true)
     .addField("**A rejoint le serveur**", `${member.joinedAt.toUTCString().substr(0, 16)} (${checkDays(member.joinedAt)})`, true)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
 }

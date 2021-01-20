@@ -14,7 +14,7 @@ exports.launch = (bot, config, message, args) => {
     .setDescription(`💀 **${message.author.username}** déteste **${user.username}**`)
     .addField(`☠️ **${Math.floor(love)}%**`, `\n\n${loveLevel}`)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
 }

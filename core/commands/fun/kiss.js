@@ -16,7 +16,7 @@ exports.launch = (client, message, args) => {
       .setDescription(`😘 **${message.author.username}** fait un bisous à **${user.username}**`)
       .setImage(body.url)
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     return message.channel.send(embed);
   })

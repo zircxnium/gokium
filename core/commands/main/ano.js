@@ -7,7 +7,7 @@ exports.launch = (client, message, args) => {
     .setColor(0x2F3136)
     .setDescription(anoMsg)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.delete().then(() => message.channel.send(embed));
 }

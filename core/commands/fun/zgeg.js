@@ -9,11 +9,11 @@ exports.launch = (client, message, args) => {
   if (!user) user = message.author;
 
   const embed = new MessageEmbed()
-    .setColor("#e30e0e")
+    .setColor(0x2F3136)
     .setDescription(`🍆 **${user.username}** Zgego-machine :)`)
     .addField(`Taille de ton zgegos`, `8=${zgegLevel}D`)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
 }

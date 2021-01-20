@@ -18,7 +18,7 @@ exports.launch = (client, message, args) => {
       .setColor(0x2F3136)
       .setAuthor(`__${member.user.tag}__ à été unmute`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
     
     if(!member.bot) toMute.send(`T'as été unmute de **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**Raison:** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());

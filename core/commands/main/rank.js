@@ -17,7 +17,7 @@ exports.launch = (bot, config, message, args) => {
     .setTitle(`Stats de **${user.username}**`)
     .setDescription(`**Level:** ${levelCount}\n**XP:** ${xpCount}/${nxtLvl}\n**Message(s):** ${messageCount}`)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
 }

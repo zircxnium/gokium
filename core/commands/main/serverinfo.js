@@ -18,7 +18,7 @@ exports.launch = (client, message, args) => {
     .addField("**Région**", `${message.guild.region.charAt(0).toUpperCase() + message.guild.region.slice(1)}`, true, true)
     .addField("**Création**", `${date.toLocaleDateString('fr-FR')} - ${date.getUTCHours()}:${date.getUTCMinutes()} (${checkDays(message.channel.guild.createdAt)})`, true)
     .setTimestamp()
-    .setFooter("Gokium", bot.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }));
+    .setFooter("gokium", bot.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }));
 
   return message.channel.send(embed);
 }

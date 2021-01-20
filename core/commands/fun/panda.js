@@ -12,7 +12,7 @@ exports.launch = (client, message, args) => {
       .setDescription(`🐼 **${message.author.username}**, voici un panda pour toi !`)
       .setImage(body.link)
       .setTimestamp()
-      .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+      .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     return message.channel.send(embed);
   })

@@ -14,7 +14,7 @@ exports.launch = (client, message, args) => {
     .setDescription(`🏳️‍🌈 **${user.username}** est gay à :`)
     .addField(`🌈 **${Math.floor(gay)}%**`, `\n\n${gayLevel}`)
     .setTimestamp()
-    .setFooter("Gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     return message.channel.send(embed);
 }

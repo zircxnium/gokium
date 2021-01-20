@@ -1,12 +1,12 @@
 {
   "name": "gokium",
   "version": "2.0.0",
-  "description": "A node.Js Discord Bot",
+  "description": "A Node.js Discord Bot",
   "scripts": {
     "dev": "nodemon ./core/index.js"
   },
   "author": "zirconiium",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "color-processing-library": "^1.2.5",

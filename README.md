@@ -10,5 +10,6 @@ TOKEN=mybottoken
 ```
 
 ## TO-DO
+- Help command
 - Locales (multi-languages)
 - CSS images

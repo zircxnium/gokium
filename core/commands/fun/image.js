@@ -10,7 +10,7 @@ exports.launch = (client, message, args) => {
     const result = Math.floor(Math.random() * 100);
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`${message.author.username}`, message.author.displayAvatarURL({format: "png" || "gif"}))
+      .setDescription(`🌆 **${message.author.username}**, voici une image pour toi !`)
       .setImage(body[result].download_url)
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

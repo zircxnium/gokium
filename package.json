@@ -1,0 +1,22 @@
+{
+  "name": "gokium",
+  "version": "2.0.0",
+  "description": "A node.Js Discord Bot",
+  "scripts": {
+    "dev": "nodemon ./core/index.js"
+  },
+  "author": "zirconiium",
+  "private": true,
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "^14.15.4"
+  }
+}

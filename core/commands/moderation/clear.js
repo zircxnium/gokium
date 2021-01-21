@@ -3,7 +3,7 @@ exports.launch = (client, message, args) => {
   if (!message.member.hasPermission("MANAGE_MESSAGES")) return;
 
   const member = message.mentions.members.first();
-  const amount = (!member && args[0]) || args[1];
+  const amount = (!member && args[0]) || (member && args[1]);
   if (isNaN(amount)) return;
   if (amount < 1 || amount > 100) return;
   

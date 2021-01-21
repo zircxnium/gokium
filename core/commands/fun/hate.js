@@ -11,7 +11,7 @@ exports.launch = (bot, config, message, args) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setDescription(`💀 **${message.author.username}** déteste **${user.username}**`)
+    .setDescription(`💀 **${message.author.username}** déteste **${user.username}** à :`)
     .addField(`☠️ **${Math.floor(love)}%**`, `\n\n${loveLevel}`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

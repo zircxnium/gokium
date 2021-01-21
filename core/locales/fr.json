@@ -1,0 +1,16 @@
+{
+    "commands": {
+        "main": {
+            "ano": {
+                "author": "Anonyme",
+                "description": "Envoyer un message en anonyme.",
+                "use": "ano"
+            },
+            "botinvite": {
+                "replyMsg": "je t'envoie ça en dm !",
+                "description": "Envoie l'invitation du bot `gokium`.",
+                "use": "botinvite"
+            }
+        }
+    }
+}

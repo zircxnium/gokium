@@ -1,6 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 const db = require('quick.db');
 
+exports.langs = ["fr", "en"];
+
 exports.formatString = str => str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 exports.capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);

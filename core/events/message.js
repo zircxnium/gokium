@@ -4,6 +4,9 @@ const defaultPrefix = "gokium";
 const commandsFolder = `${__dirname}/../commands`;
 const commandsCategories = ['main', 'fun', 'moderation', 'musique'];
 
+// maybe manage this with db to have custom banned words ?
+const bannedWords = [`discord.gg`, `.gg/`, `.gg /`, `. gg /`, `. gg/`, `discord .gg /`, `discord.gg /`, `discord .gg/`, `discord .gg`, `discord . gg`, `discord. gg`, `discord gg`, `discordgg`, `discord gg /`];
+
 exports.run = (client, message) => {
     const { guild, content, author, channel } = message;
     
@@ -17,17 +20,8 @@ exports.run = (client, message) => {
     // Return if message is sent by bot.
     if (author.bot) return;
     
-    //   // Blacklist words
-    //   const bannedWords = [`discord.gg`, `.gg/`, `.gg /`, `. gg /`, `. gg/`, `discord .gg /`, `discord.gg /`, `discord .gg/`, `discord .gg`, `discord . gg`, `discord. gg`, `discord gg`, `discordgg`, `discord gg /`];
-    //   try {
-    //     if (bannedWords.some(word => message.content.toLowerCase().includes(word))) {
-    //       if (message.member.hasPermission("ADMINISTRATOR")) return;
-    //       message.delete();
-    //     }
-    //   } catch(e) {
-    //     console.log(e);
-    //   }
-    // }
+    // Blacklist words
+    if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && !message.member.hasPermission("ADMINISTRATOR")) message.delete();
   
     // XP
     const xpAdd = Math.floor(Math.random() * 7) + 8;
@@ -58,7 +52,12 @@ exports.run = (client, message) => {
         const fileCommandExists = fs.existsSync(`${commandsFolder}/${category}/${command}.js`);
         if(!fileCommandExists) return;
 
+        const getLang = db.get(`lang_${guild.id}`);
+        if (!getLang) return;
+        const lang = require(`../locales/${getLang}.json`)["commands"][category][command];
+        if (!lang) return;
+
         const commandFile = require(`${commandsFolder}/${category}/${command}.js`);
-        commandFile.launch(client, message, args);
+        commandFile.launch(client, message, args, lang);
     });
 };

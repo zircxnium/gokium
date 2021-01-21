@@ -7,7 +7,7 @@ exports.launch = (client, message, args) => {
   fetch(args[0] ? (coutries.find(country => country.toLowerCase() === args[0].toLowerCase()) ? `https://covid19.mathdro.id/api/countries/${args[0]}` : "https://covid19.mathdro.id/api") : "https://covid19.mathdro.id/api")
   .then(res => res.json())
   .then(body => {
-    if(!body) return message.reply("Impossible de get le `body`");
+    if(!body) return;
   
     const embed = new MessageEmbed()
       .setColor(0x2F3136)

@@ -1,20 +1,13 @@
 const { MessageEmbed } = require("discord.js");
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   const time = (new Date()).getTime() - 1;
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
     .setTitle('🏓 Pong')
-    .setDescription(`API Latency: **${Math.round(client.ws.ping)}ms**\nBot Latency: **${(new Date()).getTime() - time}ms**`)
-    .setImage(body.link)
+    .setDescription(`${lang.apiLatency}: **${Math.round(client.ws.ping)}ms**\n${lang.botLatency}: **${(new Date()).getTime() - time}ms**`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
-
   return message.channel.send(embed);
-}
-
-exports.commands = {
-  description: "Renvoie les latences du bot (API&Client).",
-  use: "ping"
 }

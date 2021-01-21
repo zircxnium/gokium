@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if(!message.member.hasPermission("MANAGE_ROLES")) return;
 
   const member = message.mentions.members.first();

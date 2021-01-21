@@ -1,5 +1,5 @@
 /* Export our launch() function */
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission("MANAGE_MESSAGES")) return;
 
   const member = message.mentions.members.first();

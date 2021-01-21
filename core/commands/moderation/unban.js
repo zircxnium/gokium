@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('BAN_MEMBERS')) return;
   
   const userId = message.mentions.users.first() && message.mentions.users.first().id || args[0];

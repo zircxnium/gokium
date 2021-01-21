@@ -1,4 +1,4 @@
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   const choose = args.filter(member => member != "|");
   const result = Math.floor(Math.random() * choose.length);
   const answer = choose[result];

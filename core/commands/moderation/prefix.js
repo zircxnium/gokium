@@ -1,6 +1,6 @@
 const db = require('quick.db');
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('ADMINISTRATOR')) return;
   
   const prefix = args[0];

@@ -1,3 +1,3 @@
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
 
 }

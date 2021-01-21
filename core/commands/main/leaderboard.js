@@ -1,16 +1,17 @@
-const Discord = require('discord.js');
+const { MessageEmbed } = require("discord.js");
 const db = require('quick.db');
 
-exports.launch = async (client, message, args) => {
+// to refactor
+exports.launch = async (client, message, args, lang) => {
   let content = "";
-  if (!args[0] || (args[0] !== 'levels' && args[0] !== 'messages')) return message.reply('utilise bien la commande : `gokium leaderboard levels` ou `gokium leaderboard messages`')
+  if (!args[0] || (args[0] !== 'levels' && args[0] !== 'messages')) return message.reply(lang.replyMsg);
  
   if (args[0] == 'levels') {
     const level = db.all().filter(a => a.ID.startsWith(`level_${message.guild.id}`)).sort((a, b) => (a.data < b.data) ? 1 : -1).splice(0, 10);
 
     for (let i = 0; i < level.length; i++) {
       await client.users.fetch(level[i].ID.split('_')[2]).then(usr => {
-        content += `**${i+1}.** ${usr.username} - Level: ${level[i].data}\n`;
+        content += `**${i+1}.** ${usr.username} - ${lang.level}: ${level[i].data}\n`;
       });
     }
   } else if(args[0] == 'messages') {
@@ -23,17 +24,12 @@ exports.launch = async (client, message, args) => {
     }
   }
 
-  const embed = new Discord.MessageEmbed()
+  const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setTitle(`Leaderboard de **${message.guild.name}**`)
+    .setTitle(`${lang.title} **${message.guild.name}**`)
     .setDescription(content)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
-}
-
-exports.commands = {
-  description: "Voir le top 10 du serveur.",
-  use: "leaderboard [levels ou messages]"
 }

@@ -1,7 +1,7 @@
 const db = require('quick.db');
 const utils = require('../../utils');
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('MANAGE_CHANNELS')) return;
   
   const language = utils.langs.find(lang => lang === args[0].toLowerCase());

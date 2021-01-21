@@ -1,5 +1,5 @@
 /* Export our launch() function */
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   const alpha = " ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split(""),
   morse = "/,.-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..,--,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--,-..-,-.--,--..,.----,..---,...--,....-,.....,-....,--...,---..,----.,-----".split(",");
   let text = args.join(" ").toUpperCase();

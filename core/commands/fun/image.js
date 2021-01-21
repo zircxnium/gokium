@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const fetch = require('node-fetch');
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   fetch("https://picsum.photos/v2/list?page=1&limit=100")
   .then(res => res.json())
   .then(body => {

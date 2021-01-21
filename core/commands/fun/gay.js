@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   const user = message.mentions.users.first() || message.author;
   const gay = Math.random() * 100;
   const gayIndex = Math.floor(gay / 10);

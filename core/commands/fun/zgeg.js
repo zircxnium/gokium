@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   const user = message.mentions.users.first() || message.author;
   const zgeg = Math.random() * 100;
   const zgegIndex = Math.floor(zgeg / 10);

@@ -9,7 +9,8 @@ This project is not ready at all. It's still in development and not ready-to-use
 TOKEN=mybottoken
 ```
 
+## Use gokium
+- If you want to use gokium directly here is a link : https://discord.com/oauth2/authorize?client_id=682814905166069850&permissions=8&scope=bot
+
 ## TO-DO
-- Help command
-- Locales (multi-languages)
 - CSS images

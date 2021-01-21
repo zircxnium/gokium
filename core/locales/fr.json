@@ -1,15 +1,189 @@
 {
     "commands": {
+        "fun": {
+            "8ball": {
+
+            },
+            "cat": {
+
+            },
+            "choose": {
+
+            },
+            "comment": {
+
+            },
+            "dog": {
+
+            },
+            "gay": {
+
+            },
+            "hate": {
+
+            },
+            "hug": {
+
+            },
+            "image": {
+
+            },
+            "kiss": {
+
+            },
+            "love": {
+
+            },
+            "meme": {
+
+            },
+            "morse": {
+
+            },
+            "panda": {
+                
+            },
+            "pat": {
+
+            },
+            "pepe": {
+
+            },
+            "pikachu": {
+
+            },
+            "raccoon": {
+
+            },
+            "rate": {
+
+            },
+            "roulette": {
+
+            },
+            "slap": {
+
+            },
+            "wink": {
+
+            },
+            "zgeg": {
+                
+            }
+        },
         "main": {
             "ano": {
                 "author": "Anonyme",
-                "description": "Envoyer un message en anonyme.",
+                "description": "Message anonyme.",
                 "use": "ano"
             },
             "botinvite": {
                 "replyMsg": "je t'envoie ça en dm !",
-                "description": "Envoie l'invitation du bot `gokium`.",
+                "description": "Invitation du bot `gokium`.",
                 "use": "botinvite"
+            },
+            "covid": {
+                "title": "Statistiques",
+                "titleArg": "Mondiales",
+                "confirmed": "Confirmés",
+                "recovered": "Soignés",
+                "deaths": "Morts",
+                "lastUpdate": "Dernière update",
+                "description": "Stats du COVID-19.",
+                "use": "covid [Pays *optionnel*]"
+            },
+            "leaderboard": {
+                "replyMsg": "utilise bien la commande : `gokium leaderboard levels` ou `gokium leaderboard messages`",
+                "level": "Niveau",
+                "title": "Leaderboard de",
+                "description": "Top 10 du serveur.",
+                "use": "leaderboard [levels ou messages]"
+            },
+            "ping": {
+                "apiLatency": "Latence de l'API Discord",
+                "botLatency": "Latence du Bot",
+                "description": "Latences du bot et des API.",
+                "use": "ping"
+            },
+            "pp": {
+                "avatarMsg": "voici l'avatar de",
+                "description": "Avatar d'un utilisateur.",
+                "use": "pp [@utilisateur *optionnel*]"
+            },
+            "rank": {
+                "title": "Stats de",
+                "level": "Niveau",
+                "description": "Rank d'un utilisateur.",
+                "use": "rank [@utilisateur *optionnel*]"
+            },
+            "serverinfo": {
+                "name": "Nom",
+                "owner": "Propriétaire",
+                "members": "Membres",
+                "humans": "Humains",
+                "roles": "Rôles",
+                "region": "Région",
+                "createdAt": "Création",
+                "description": "Infos du serveur.",
+                "use": "serverinfo"
+            },
+            "snipe": {
+                "old": "Ancien",
+                "new": "Nouveau",
+                "description": "Snipe le dernier message supprime ou édité.",
+                "use": "snipe [edit *optionnel*]"
+            },
+            "status": {
+                "description": "Status d'un utlisateur.",
+                "use": "status [@utilisateur *optionnel*]"
+            },
+            "userinfo": {
+                "online":"En ligne",
+                "idle":"Absent",
+                "dnd": "Ne pas déranger",
+                "offline": "Hors-ligne/Invisible",
+                "title": "Infos de",
+                "playing": "Joue à",
+                "roles": "Rôles",
+                "createdAt": "Création",
+                "joinedAt": "À rejoint le serveur",
+                "description": "Infos d'un utlisateur.",
+                "use": "userinfo [@utilisateur *optionnel*]"
+            }
+        },
+        "moderation": {
+            "ban": {
+
+            },
+            "clear": {
+
+            },
+            "cmdchannel": {
+
+            }, 
+            "kick": {
+
+            },
+            "lang": {
+
+            },
+            "logs": {
+
+            },
+            "mute": {
+
+            },
+            "prefix": {
+
+            },
+            "rolecolor": {
+
+            },
+            "unban": {
+
+            },
+            "unmute": {
+
             }
         }
     }

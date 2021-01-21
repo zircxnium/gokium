@@ -1,6 +1,6 @@
 const color = require('color-processing-library')
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('MANAGE_ROLES')) return;
 
   const role = args[0];

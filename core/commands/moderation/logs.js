@@ -1,6 +1,6 @@
 const db = require('quick.db');
 
-exports.launch = (client, message, args) => {
+exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('MANAGE_CHANNELS')) return;
   
   const logsChannel = args[0].replace(/<|#|>/g, '');

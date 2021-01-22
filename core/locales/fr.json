@@ -189,15 +189,19 @@
                 "use": "lang [language]"
             },
             "logs": {
-
-                "description": "Set la langue du bot",
+                "deactivated": "les logs ont été désactivés avec succès !",
+                "channeldoesntexist": "ce channel n'existe pas..",
+                "activated": "le channel logs à été set sur",
+                "description": "Set un channel logs",
                 "use": "logs [channel]"
             },
             "mute": {
 
             },
             "prefix": {
-
+                "newprefix": "Le préfix du bot est désormais",
+                "description": "Set le prefix du bot.",
+                "use": "prefix [prefix]"
             },
             "rolecolor": {
 

@@ -8,20 +8,15 @@ exports.launch = (client, message, args, lang) => {
     if (db.get(`logs_${message.guild.id}`)) {
       message.delete().then(() => {
         db.delete(`logs_${message.guild.id}`);
-        message.reply(`les logs ont été désactivés avec succès !`).then(msg => msg.delete({ timeout: 3000 }));
+        message.reply(lang.deactivated).then(msg => msg.delete({ timeout: 3000 }));
       });
     }
 
     return;
   }
 
-  if (!message.guild.channels.cache.has(logsChannel)) return message.reply('ce channel n\'existe pas..');
+  if (!message.guild.channels.cache.has(logsChannel)) return message.reply(lang.channeldoesntexist);
 
   db.set(`logs_${message.guild.id}`, logsChannel);
-  return message.delete().then(() => message.reply(`le channel logs à été set sur **<#${logsChannel}>** !`).then(msg => { msg.delete({ timeout: 3000 })}));
-}
-
-exports.commands = {
-  description: "Set un channel pour les logs.",
-  use: "setlogs [channel]"
+  return message.delete().then(() => message.reply(`${lang.activated} **<#${logsChannel}>** !`).then(msg => { msg.delete({ timeout: 3000 })}));
 }

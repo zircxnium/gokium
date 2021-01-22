@@ -15,6 +15,11 @@ exports.checkDays = date => {
   return days + (days > 1 ? " jours" : " jour");
 }
 
+exports.parse = str => {
+  const args = [].slice.call(arguments, 1), i = 0;
+  return str.replace(/%s/g, () => args[i++]);
+}
+
 exports.logs = (data) => {
   const logsChannel = db.get(`logs_${data.guildId}`);
   if (!logsChannel) return;

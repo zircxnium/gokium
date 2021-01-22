@@ -153,22 +153,45 @@
         },
         "moderation": {
             "ban": {
-
+                "cantban": "Tu ne peux pas ban ce membre.",
+                "noreason": "Aucune raison spécifiée",
+                "beenbanned": "à été ban",
+                "bannedMsg": "T'as été ban de",
+                "reason": "Raison",
+                "description": "Bannir un utlisateur.",
+                "use": "ban [@utilisateur] [raison *optionnel*]"
             },
             "clear": {
-
+                "msgDeleted": "message à été supprimé.",
+                "msgsDeleted": "messages ont été supprimés.",
+                "description": "Clear des messages.",
+                "use": "clear [@utilisateur *optionnel*] [montant]"
             },
             "cmdchannel": {
-
+                "deactivated": "le command-only à été désactivé avec succès !",
+                "channeldoesntexist": "ce channel n'existe pas..",
+                "activated": "le channel command-only à été set sur",
+                "description": "Set un channel command-only.",
+                "use": "cmdchannel [channel]"
             }, 
             "kick": {
-
+                "cantkick": "Tu ne peux pas kick ce membre.",
+                "noreason": "Aucune raison spécifiée",
+                "beenkicked": "à été kick",
+                "kickedMsg": "T'as été kick de",
+                "reason": "Raison",
+                "description": "Kick un utlisateur.",
+                "use": "kick [@utilisateur] [raison *optionnel*]"
             },
             "lang": {
-
+                "hasbeenset": "la langue à été set sur",
+                "description": "Set la langue du bot",
+                "use": "lang [language]"
             },
             "logs": {
 
+                "description": "Set la langue du bot",
+                "use": "logs [channel]"
             },
             "mute": {
 

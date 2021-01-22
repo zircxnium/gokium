@@ -8,10 +8,5 @@ exports.launch = (client, message, args, lang) => {
   if (!language) return;
 
   db.set(`lang_${message.guild.id}`, language);
-  return message.delete().then(() => message.reply(`la langue à été set sur **${language}** !`).then(msg => { msg.delete({ timeout: 3000 })}));
-}
-
-exports.commands = {
-  description: "Set un channel pour executer les commandes. ATTENTION, vous ne pourrez utiliser les commandes du bot que dans ce channel !",
-  use: "setcommandchannel [channel]"
+  return message.delete().then(() => message.reply(`${lang.hasbeenset} **${language}** !`).then(msg => { msg.delete({ timeout: 3000 })}));
 }

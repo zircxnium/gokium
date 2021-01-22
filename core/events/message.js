@@ -38,8 +38,9 @@ exports.run = (client, message) => {
   
     // Get Prefix
     const dbPrefix =  db.get(`prefix_${guild.id}`);
+    if (dbPrefix) return;
     const currentPrefix = content.startsWith(defaultPrefix) ? defaultPrefix : (content.startsWith(dbPrefix) ? dbPrefix : null);
-    if(!currentPrefix) return;
+    if (!currentPrefix) return;
   
     // Get if command channel only
     const commandChannelId = db.get(`commandchannel_${guild.id}`);
@@ -53,7 +54,7 @@ exports.run = (client, message) => {
         if(!fileCommandExists) return;
 
         const getLang = db.get(`lang_${guild.id}`);
-        if (!getLang) return;
+        if (!getLang) return db.set(`lang_${guild.id}`, 'fr');
         const lang = require(`../locales/${getLang}.json`)["commands"][category][command];
         if (!lang) return;
 

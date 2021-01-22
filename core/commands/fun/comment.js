@@ -1,5 +1,5 @@
 /* Export our launch() function */
-exports.launch = async (client, message, args) => {
+exports.launch = async (client, message, args, lang) => {
   const newArgs = args.join(' ');
   if (!newArgs) return message.reply('faut peut-être mettre un message, tu penses pas ? :)');
 

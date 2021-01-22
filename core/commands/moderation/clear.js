@@ -12,14 +12,9 @@ exports.launch = (client, message, args, lang) => {
       const msgsToDelete = member ? msgs.filter(msg => msg.author.id === member.id) : msgs;
       console.log(msgsToDelete);
       message.channel.bulkDelete(msgsToDelete).then(() => {
-        const isMoreThan1 = amount > 1 ? "messages ont été supprimés." : "message à été supprimé.";
-        message.channel.send(`**${amount}** ${isMoreThan1}`).then(msg => msg.delete({ timeout: 2500 }));
+        const moreThan1 = amount > 1 ? lang.msgsDeleted : lang.msgDeleted;
+        message.channel.send(`**${amount}** ${moreThan1}`).then(msg => msg.delete({ timeout: 2500 }));
       });
     });
   });
-}
-
-exports.commands = {
-  description: "Clear le chat.",
-  use: "clear [montant]"
 }

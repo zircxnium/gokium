@@ -14,7 +14,7 @@ exports.launch = (client, message, args, lang) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setTitle(`${lang.rank} **${user.username}**`)
+    .setTitle(`${lang.title} **${user.username}**`)
     .setDescription(`**${lang.level}:** ${levelCount}\n**XP:** ${xpCount}/${nxtLvl}\n**Message(s):** ${messageCount}`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

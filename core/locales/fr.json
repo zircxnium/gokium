@@ -128,7 +128,7 @@
                 "use": "serverinfo"
             },
             "snipe": {
-                "old": "Ancien",
+                "old": "Ancien ",
                 "new": "Nouveau",
                 "description": "Snipe le dernier message supprime ou édité.",
                 "use": "snipe [edit *optionnel*]"

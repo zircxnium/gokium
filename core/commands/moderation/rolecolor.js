@@ -4,8 +4,8 @@ exports.launch = (client, message, args, lang) => {
   if (!message.member.hasPermission('MANAGE_ROLES')) return;
 
   const role = args[0];
-  if (!role) return message.reply("précise un rôle ! Je veux l'ID ou le nom.");
-  const roleColor = args[1];
+  if (!role) return message.reply("précise l'ID ou le nom du rôle.");
+  let roleColor = args[1];
   if (!roleColor) return message.reply("précise une couleur ! Je veux une couleur HEX (google est ton ami hein).");
 
   const findRole = message.guild.roles.cache.find(r => r.name.includes(role) || r.id.includes(role));

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 
 exports.launch = (client, message, args, lang) => {
-  const user = message.mentions.users.first();
+  let user = message.mentions.users.first();
   const love = Math.random() * 100;
   const loveIndex = Math.floor(love / 10);
   const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);

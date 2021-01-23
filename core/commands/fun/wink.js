@@ -2,7 +2,8 @@ const { MessageEmbed } = require("discord.js");
 const fetch = require('node-fetch');
 
 exports.launch = (client, message, args, lang) => {
-  const user = message.mentions.users.first();
+  let user = message.mentions.users.first();
+  
   if (!user && args[0] === "random") user = message.guild.members.cache.filter(member => !member.user.bot).random().user;
   if (!user) return message.reply('faut peut-être me mentionner l\'utilisateur, tu penses pas ? :)');
 

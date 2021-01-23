@@ -37,8 +37,8 @@ exports.run = (client, message) => {
     if (nxtLvl <= xpCount) db.add(`level_${guild.id}_${author.id}`, 1);
   
     // Get Prefix
-    const dbPrefix =  db.get(`prefix_${guild.id}`);
-    if (dbPrefix) return;
+    const dbPrefix = db.get(`prefix_${guild.id}`);
+    if (!dbPrefix) return db.set(`prefix_${guild.id}`, 'g!');
     const currentPrefix = content.startsWith(defaultPrefix) ? defaultPrefix : (content.startsWith(dbPrefix) ? dbPrefix : null);
     if (!currentPrefix) return;
   

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 
 exports.launch = (client, message, args, lang) => {
-  const user = message.mentions.users.first() || message.author;
+  let user = message.mentions.users.first() || message.author;
   const gay = Math.random() * 100;
   const gayIndex = Math.floor(gay / 10);
   const gayLevel = "🏳️‍🌈".repeat(gayIndex) + "-".repeat(10 - gayIndex);

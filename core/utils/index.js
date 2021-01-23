@@ -26,7 +26,7 @@ exports.logs = (data) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setAuthor(data.initiator.username, data.initiator.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+    .setAuthor(data.initiator.username ? data.initiator.username : data.initiator.displayName, data.initiator.avatarURL ? data.initiator.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }) : data.initiator.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
     .setDescription(data.title)
     .addField(`**${data.newMessage ? "Ancien " : ""}Message**`, data.message, true)
     .setTimestamp()

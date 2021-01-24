@@ -2,73 +2,128 @@
     "commands": {
         "fun": {
             "8ball": {
-
+                "replies": ["oui.", "non.", "j'en sais rien..", "demande moi ça plus tard la j'en ai rien a foutre 🙂", "si tu le dis", "j'en suis pas sur..", "sans un doute !", "bof."],
+                "askaquestion": "pose moi une question avant et je te répondrais avec plaisir.",
+                "description": "Pose ta question et réponse tu-auras.",
+                "use": "8ball [question]"
             },
             "cat": {
-
+                "heresacat": "voici un chat pour toi !",
+                "description": "Envoie la photo d'un chat au hasard.",
+                "use": "cat"
             },
             "choose": {
-
+                "answermsg": "mmmh je dirais..",
+                "description": "Fais un choix pour toi.",
+                "use": "choose [choix 1] | [choix 2]"
             },
             "comment": {
-
+                "putamsg": "faut peut-être mettre un message, tu penses pas ?",
+                "description": "Renvoie votre message sous forme de commentaire Youtube.",
+                "use": "comment [message]"
             },
             "dog": {
-
+                "heresadog": "voici un chien pour toi !",
+                "description": "Envoie la photo d'un chien au hasard.",
+                "use": "dog"
             },
             "gay": {
-
+                "pourcentage": "est gay à",
+                "description": "Renvoie votre taux de pourcentage gay.",
+                "use": "gay [@utilisateur *optionnel*]"
             },
             "hate": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "pourcentage": "déteste",
+                "pourcentage2": "à",
+                "description": "Renvoie votre taux de pourcentage de haine.",
+                "use": "hate [@utilisateur]"
             },
             "hug": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "hugging": "fait un calin à",
+                "description": "Fais un calin à un utilisateur.",
+                "use": "hug [@utilisateur]"
             },
             "image": {
-
+                "heresanimage": "voici une image pour toi",
+                "description": "Envoie une image au hasard.",
+                "use": "image"
             },
             "kiss": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "kissing": "fait un bisous à",
+                "description": "Embrasse un utilisateur.",
+                "use": "kiss [@utilisateur]"
             },
             "love": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "pourcentage": "aime",
+                "pourcentage2": "à",
+                "description": "Renvoie votre taux de pourcentage d'amour.",
+                "use": "love [@utilisateur]"
             },
             "meme": {
-
+                "heresameme": "voici un meme pour toi",
+                "description": "Envoie un meme au hasard.",
+                "use": "meme"
             },
             "morse": {
-
+                "description": "Transforme du texte en morse.",
+                "use": "morse [texte]"
             },
             "panda": {
-                
+                "heresapanda": "voici un panda pour toi !",
+                "description": "Envoie la photo d'un panda au hasard.",
+                "use": "panda"
             },
             "pat": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "patting": "caresse",
+                "description": "Caresse un utilisateur.",
+                "use": "pat [@utilisateur]"
             },
             "pepe": {
-
+                "heresapepe": "voici un pepe pour toi !",
+                "description": "Envoie un pepe au hasard",
+                "use": "pepe"
             },
             "pikachu": {
-
+                "heresapikachu": "voici un pikachu pour toi !",
+                "description": "Envoie la photo d'un pikachu au hasard.",
+                "use": "pikachu"
             },
             "raccoon": {
-
+                "heresaraccoon": "voici un raton pour toi !",
+                "description": "Envoie la photo d'un raton au hasard.",
+                "use": "raccoon"
             },
             "rate": {
-
+                "illsay": "Je donne un",
+                "description": "Note un utilisateur.",
+                "use": "rate [@utilisateur *optionnel*]"
             },
             "roulette": {
-
+                "winner": "Le vainqueur de",
+                "is": "est",
+                "description": "Choisis un gagnant au hasard.",
+                "use": "roulette [message]"
             },
             "slap": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "slapping": "frappe",
+                "description": "Tape un utilisateur.",
+                "use": "slap [@utilisateur]"
             },
             "wink": {
-
+                "mentionsomeone": "faut peut-être me mentionner l'utilisateur, tu penses pas ?",
+                "winking": "fait un clin d'oeil à",
+                "description": "Fait un clin d'oeil à un utilisateur.",
+                "use": "wink [@utilisateur]"
             },
             "zgeg": {
-                
+                "description": "Renvoie votre taille de zgeg.",
+                "use": "zgeg [@utilisateur *optionnel*]"
             }
         },
         "main": {
@@ -89,7 +144,7 @@
                 "recovered": "Soignés",
                 "deaths": "Morts",
                 "lastUpdate": "Dernière update",
-                "description": "Stats du COVID-19.",
+                "description": "Stats de la COVID-19.",
                 "use": "covid [Pays *optionnel*]"
             },
             "leaderboard": {
@@ -185,18 +240,25 @@
             },
             "lang": {
                 "hasbeenset": "la langue à été set sur",
-                "description": "Set la langue du bot",
+                "description": "Set la langue du bot.",
                 "use": "lang [language]"
             },
             "logs": {
                 "deactivated": "les logs ont été désactivés avec succès !",
                 "channeldoesntexist": "ce channel n'existe pas..",
                 "activated": "le channel logs à été set sur",
-                "description": "Set un channel logs",
+                "description": "Set un channel logs.",
                 "use": "logs [channel]"
             },
             "mute": {
-
+                "cantmuteuself": "Tu ne peux pas te mute.",
+                "noreason": "Aucune raison spécifiée",
+                "alreadymuted": "Cet utilisateur est déjà mute.",
+                "beenmuted": "à été mute",
+                "mutedMsg": "T'as été mute de",
+                "reason": "Raison",
+                "description": "Mute un utilisateur.",
+                "use": "mute [@utilisateur] [raison *optionnel*]"
             },
             "prefix": {
                 "newprefix": "Le préfix du bot est désormais",
@@ -204,13 +266,30 @@
                 "use": "prefix [prefix]"
             },
             "rolecolor": {
-
+                "missid": "précise l'ID ou le nom du rôle.",
+                "misscolor": "précise une couleur HEX.",
+                "roledoesntexist": "ce rôle n'existe pas.",
+                "colornotvalid": "la couleur n'est pas valide.",
+                "rolecolor": "la couleur du rôle",
+                "changedon": "à été changé sur",
+                "description": "Changer la couleur d'un rôle.",
+                "use": "rolecolor [id ou nom du rôle]"
             },
             "unban": {
-
+                "noreason": "Aucune raison spécifiée",
+                "beenunban": "à été unban",
+                "reason": "Raison",
+                "description": "Unban un utlisateur.",
+                "use": "unban [@utilisateur] [raison *optionnel*]"
             },
             "unmute": {
-
+                "noreason": "Aucune raison spécifiée",
+                "notmuted": "Cet utilisateur n'est pas mute.",
+                "beenunmuted": "à été unmute",
+                "unmutedMsg": "T'as été unmute de",
+                "reason": "Raison",
+                "description": "Unmute un utilisateur.",
+                "use": "unmute [@utilisateur] [raison *optionnel*]"
             }
         }
     }

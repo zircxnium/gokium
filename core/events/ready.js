@@ -1,6 +1,4 @@
-exports.run = async client => {
-    await client.user.setActivity("c rien c gokium");
-    await client.user.setStatus('dnd');
-    
+exports.run = client => {
+    client.user.setActivity("gokium help");
     console.log("gokium is running.");
 }

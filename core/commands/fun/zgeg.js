@@ -11,14 +11,9 @@ exports.launch = (client, message, args, lang) => {
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
     .setDescription(`🍆 **${user.username}**, ZgegoMachine :)`)
-    .addField(`Taille de ton zgegos`, `8=${zgegLevel}D`)
+    .addField(lang.size, `8=${zgegLevel}D`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(embed);
-}
-
-exports.commands = {
-  description: "Calcule la taille de votre zgeg.",
-  use: "zgeg (utilisateur optionnel)"
 }

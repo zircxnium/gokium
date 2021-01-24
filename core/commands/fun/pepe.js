@@ -17,12 +17,10 @@ exports.launch = (client, message, args, lang) => {
 
   const pepe = new MessageEmbed()
     .setColor(0x2F3136)
-    .setImage(pepes[dapepe]);
+    .setDescription(`**${message.author.username}**, ${lang.heresapepe} !`)
+    .setImage(pepes[dapepe])
+    .setTimestamp()
+    .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
   return message.channel.send(pepe);
-}
-
-exports.commands = {
-  description: "Envoie un pepe.",
-  use: "pepe"
 }

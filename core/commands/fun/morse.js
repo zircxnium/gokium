@@ -24,8 +24,3 @@ exports.launch = (client, message, args, lang) => {
 
   return message.channel.send("`" + text + "`");
 }
-
-exports.commands = {
-  description: "Transforme un texte en morse.",
-  use: "morse [texte]"
-}

@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 exports.launch = (client, message, args, lang) => {
   let user = message.mentions.users.first() || message.author;
-  const gay = Math.random() * 100;
+  let gay = Math.random() * 100;
   const gayIndex = Math.floor(gay / 10);
   const gayLevel = "🏳️‍🌈".repeat(gayIndex) + "-".repeat(10 - gayIndex);
 
@@ -11,15 +11,10 @@ exports.launch = (client, message, args, lang) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setDescription(`🏳️‍🌈 **${user.username}** est gay à :`)
+    .setDescription(`🏳️‍🌈 **${user.username}** ${lang.pourcentage} :`)
     .addField(`🌈 **${Math.floor(gay)}%**`, `\n\n${gayLevel}`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     return message.channel.send(embed);
-}
-
-exports.commands = {
-  description: "Calcule votre taux de gayitude.",
-  use: "gay (utilisateur optionnel)"
 }

@@ -7,6 +7,11 @@ exports.formatString = str => str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " 
 
 exports.capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
+exports.getCommands = () => {
+
+  return;
+}
+
 exports.checkDays = date => {
   const now = new Date();
   const diff = now.getTime() - date.getTime();
@@ -15,6 +20,7 @@ exports.checkDays = date => {
   return days + (days > 1 ? " jours" : " jour");
 }
 
+// parse(str, args);
 exports.parse = str => {
   const args = [].slice.call(arguments, 1), i = 0;
   return str.replace(/%s/g, () => args[i++]);

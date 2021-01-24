@@ -6,7 +6,7 @@ exports.launch = (client, message, args, lang) => {
   const userId = message.mentions.users.first() && message.mentions.users.first().id || args[0];
   if (!userId) return;
 
-  const reason = args.slice(1).join(' ') || "Aucune raison spécifiée";
+  const reason = args.slice(1).join(' ') || lang.noreason;
 
   message.guild.fetchBans().then(bans => {
     const banHandle = bans.find(ban => ban.user.id === userId);
@@ -14,21 +14,16 @@ exports.launch = (client, message, args, lang) => {
 
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${banHandle.user.tag}__ à été unban`, banHandle.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(`__${banHandle.user.tag}__ ${lang.beenunban}`, banHandle.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     if (reason)
-      embed.setDescription(`**Raison:** ${reason}`);
+      embed.setDescription(`**${lang.reason}:** ${reason}`);
 
     message.guild.members.unban(banHandle.user.id, reason).then(() => {
       message.delete();
       message.channel.send(embed);
     });
   });
-}
-
-exports.commands = {
-  description: "Unban un membre.",
-  use: "unban [utilisateur] (raison optionnel)"
 }

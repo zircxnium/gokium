@@ -5,18 +5,18 @@ exports.launch = (client, message, args, lang) => {
 
   const member = message.mentions.members.first();
   if (!member) return;
-  if (member.id == message.author.id) return message.reply("Tu ne peux pas te mute.");
+  if (member.id == message.author.id) return message.reply(lang.cantmuteuself);
       
-  const reason = args.slice(1).join(' ') || "Aucune raison spécifiée";
+  const reason = args.slice(1).join(' ') || lang.noreason;
 
   const muteRole = message.guild.roles.cache.find(r => r.name === "Muted");
   if (!muteRole) {
     try {
       muteRole = await message.guild.roles.create({data: {
         name: "Muted",
-        color: "#514f48",
+        color: "#a3a2a2",
         permissions: []
-      }, reason: 'Create it.'});
+      }, reason: 'Creating Muted Role for Gokium'});
 
       message.guild.channels.cache.forEach(async (channel, id) => {
         await channel.updateOverwrite(muteRole, {
@@ -33,19 +33,19 @@ exports.launch = (client, message, args, lang) => {
   }
 
   const hasRole = member.roles.cache.has(muteRole.id);
-  if (hasRole) return message.channel.send(`Cet utilisateur est déjà mute.`);
+  if (hasRole) return message.channel.send(lang.alreadymuted);
   
   member.roles.add(muteRole.id).then(() => {
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${member.user.tag}__ à été mute`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(`__${member.user.tag}__ ${lang.beenmuted}`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     if (reason)
-      embed.setDescription(`**Raison:** ${reason}`);
+      embed.setDescription(`**${lang.raeson}** ${reason}`);
 
-    if (!member.bot) member.send(`T'as été mute de **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**Raison:** ${reason}` : ""}`);
+    if (!member.bot) member.send(`${lang.mutedMsg} **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**${lang.reason}** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   })
 }

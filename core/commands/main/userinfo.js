@@ -21,7 +21,7 @@ exports.launch = (client, message, args, lang) => {
     .addField("**Status**", status[member.user.presence.status], true, true)
     .addField(`**${lang.playing}**`, `${member.user.presence.activities.find(a => a.type === "PLAYING") ? `🎮 **${member.presence.activities.find(a => a.type === "PLAYING").name}** - ${member.user.presence.activities.find(a => a.type === "PLAYING").details}` : "Rien"}`, true, true)
     .addField(`**${lang.roles}**`, `${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `<@&${roles.id}>`).join(" **|** ") || "Aucun Role"}`, true)
-    .addField(`**${lang.createdAt}**`, `${member.user.createdAt.toUTCString().substr(0, 16)} (${checkDays(user.createdAt)})`, true)
+    .addField(`**${lang.createdAt}**`, `${member.user.createdAt.toUTCString().substr(0, 16)} (${checkDays(member.user.createdAt)})`, true)
     .addField(`**${lang.joinedAt}**`, `${member.joinedAt.toUTCString().substr(0, 16)} (${checkDays(member.joinedAt)})`, true)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

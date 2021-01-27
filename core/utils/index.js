@@ -1,13 +1,28 @@
 const { MessageEmbed } = require("discord.js");
 const db = require('quick.db');
 
+exports.defaultPrefix = "gokium";
+
+exports.commandsFolder = `${__dirname}/../commands`;
+
+exports.commandsCategories = ['main', 'fun', 'moderation'];
+
 exports.langs = ["fr", "en"];
 
 exports.formatString = str => str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 exports.capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
-exports.getCommands = () => {
+
+exports.getCommands = (guildId) => {
+  exports.commandsCategories.forEach(category => {
+    const getLang = db.get(`lang_${guildId}`);
+    if (!getLang) return;
+    const commandsLocale = require(`../locales/${getLang}.json`)["commands"][category];
+    if (!commandsLocale) return;
+    console.log(commandsLocale);
+    return commandsLocale;
+  });
 
   return;
 }

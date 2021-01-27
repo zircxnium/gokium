@@ -10,7 +10,7 @@ exports.launch = (client, message, args, lang) => {
   message.delete().then(() => {
     message.channel.messages.fetch({ limit: amount }).then(msgs => {
       const msgsToDelete = member ? msgs.filter(msg => msg.author.id === member.id) : msgs;
-      console.log(msgsToDelete);
+
       message.channel.bulkDelete(msgsToDelete).then(() => {
         const moreThan1 = amount > 1 ? lang.msgsDeleted : lang.msgDeleted;
         message.channel.send(`**${amount}** ${moreThan1}`).then(msg => msg.delete({ timeout: 2500 }));

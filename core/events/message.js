@@ -1,8 +1,6 @@
 const fs = require('fs');
 const db = require('quick.db');
-const defaultPrefix = "gokium";
-const commandsFolder = `${__dirname}/../commands`;
-const commandsCategories = ['main', 'fun', 'moderation', 'musique'];
+const { defaultPrefix, commandsFolder, commandsCategories } = require('../utils');
 
 // maybe manage this with db to have custom banned words ?
 const bannedWords = [`discord.gg`, `.gg/`, `.gg /`, `. gg /`, `. gg/`, `discord .gg /`, `discord.gg /`, `discord .gg/`, `discord .gg`, `discord . gg`, `discord. gg`, `discord gg`, `discordgg`, `discord gg /`];
@@ -48,7 +46,7 @@ exports.run = (client, message) => {
   
     const args = content.slice(currentPrefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
-
+    
     commandsCategories.forEach(category => {
         const fileCommandExists = fs.existsSync(`${commandsFolder}/${category}/${command}.js`);
         if(!fileCommandExists) return;

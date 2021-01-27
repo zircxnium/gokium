@@ -122,6 +122,7 @@
                 "use": "wink [@utilisateur]"
             },
             "zgeg": {
+                "size": "Taille de ton zgegos",
                 "description": "Renvoie votre taille de zgeg.",
                 "use": "zgeg [@utilisateur *optionnel*]"
             }
@@ -146,6 +147,12 @@
                 "lastUpdate": "Dernière update",
                 "description": "Stats de la COVID-19.",
                 "use": "covid [Pays *optionnel*]"
+            },
+            "help": {
+                "commands": "Commandes",
+                "main-emoji": "🔴",
+                "fun-emoji": "🟠",
+                "moderation-emoji": "🟡"
             },
             "leaderboard": {
                 "replyMsg": "utilise bien la commande : `gokium leaderboard levels` ou `gokium leaderboard messages`",

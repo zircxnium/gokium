@@ -1,15 +1,302 @@
 {
     "commands": {
+        "fun": {
+            "8ball": {
+                "replies": ["yes.", "no.", "i don't know..", "ask me later i don't care actually 🙂", "if you say so", "I'm not sure..", "without a doubt!", "blah."],
+                "askaquestion": "ask me a question.",
+                "description": "Ask a question and answer you will have.",
+                "use": "8ball [question]"
+            },
+            "cat": {
+                "heresacat": "here's a cat for you !",
+                "description": "Send a random cat picture.",
+                "use": "cat"
+            },
+            "choose": {
+                "answermsg": "hmm i'll say..",
+                "description": "Make a choice for you.",
+                "use": "choose [choix 1] | [choix 2]"
+            },
+            "comment": {
+                "putamsg": "write a message, it will maybe works better ?",
+                "description": "Send your message as a youtube comment",
+                "use": "comment [message]"
+            },
+            "dog": {
+                "heresadog": "here's a dog for you !",
+                "description": "Send a random dog picture.",
+                "use": "dog"
+            },
+            "gay": {
+                "pourcentage": "is gay",
+                "description": "Send your gay pourcentage.",
+                "use": "gay [@user *optional*]"
+            },
+            "hate": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "pourcentage": "hating",
+                "pourcentage2": "",
+                "description": "Send your hate pourcentage with a user.",
+                "use": "hate [@user]"
+            },
+            "hug": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "hugging": "is hugging",
+                "description": "Hug a user.",
+                "use": "hug [@user]"
+            },
+            "image": {
+                "heresanimage": "here's an image for you",
+                "description": "Send a random image.",
+                "use": "image"
+            },
+            "kiss": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "kissing": "is kissing",
+                "description": "Kiss a user.",
+                "use": "kiss [@user]"
+            },
+            "love": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "pourcentage": "love",
+                "pourcentage2": "",
+                "description": "Send your love pourcentage with a user.",
+                "use": "love [@user]"
+            },
+            "meme": {
+                "heresameme": "here's a meme for you !",
+                "description": "Send a random meme.",
+                "use": "meme"
+            },
+            "morse": {
+                "description": "Transform text to morse.",
+                "use": "morse [texte]"
+            },
+            "panda": {
+                "heresapanda": "here's a panda for you !",
+                "description": "Send a random panda picture.",
+                "use": "panda"
+            },
+            "pat": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "patting": "is patting",
+                "description": "Pat a user.",
+                "use": "pat [@user]"
+            },
+            "pepe": {
+                "heresapepe": "here's a pepe for you !",
+                "description": "Send a random pepe",
+                "use": "pepe"
+            },
+            "pikachu": {
+                "heresapikachu": "here's a pikachu for you !",
+                "description": "Send a random pikachu picture.",
+                "use": "pikachu"
+            },
+            "raccoon": {
+                "heresaraccoon": "here's a raccoon for you !",
+                "description": "Send a random raccoon picture.",
+                "use": "raccoon"
+            },
+            "rate": {
+                "illsay": "I'll say...",
+                "description": "Rate a user.",
+                "use": "rate [@user *optional*]"
+            },
+            "roulette": {
+                "winner": "Winner is",
+                "is": "is",
+                "description": "Choose a winner randomly.",
+                "use": "roulette [message]"
+            },
+            "slap": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "slapping": "is slapping",
+                "description": "Slap a user.",
+                "use": "slap [@user]"
+            },
+            "wink": {
+                "mentionsomeone": "mention a user, it will maybe works better ?",
+                "winking": "is winking",
+                "description": "Wink a user.",
+                "use": "wink [@user]"
+            },
+            "zgeg": {
+                "size": "Your zgegos size",
+                "description": "Send you, your zgeg size.",
+                "use": "zgeg [@user *optional*]"
+            }
+        },
         "main": {
             "ano": {
-                "author": "Anonyme",
-                "description": "Envoyer un message en anonyme.",
+                "author": "Anonymous",
+                "description": "Send an anonymous message.",
                 "use": "ano"
             },
             "botinvite": {
-                "replyMsg": "je t'envoie ça en dm !",
-                "description": "Envoie l'invitation du bot `gokium`.",
+                "replyMsg": "i send you that in your dm !",
+                "description": "`gokium` bot invite.",
                 "use": "botinvite"
+            },
+            "covid": {
+                "title": "Statistics",
+                "titleArg": "World-wide",
+                "confirmed": "Confirmed",
+                "recovered": "Recovered",
+                "deaths": "Deaths",
+                "lastUpdate": "Last update",
+                "description": "COVID-19's stats.",
+                "use": "covid [country *optional*]"
+            },
+            "help": {
+                "commands": "Commands",
+                "main-emoji": "🔴",
+                "fun-emoji": "🟠",
+                "moderation-emoji": "🟡"
+            },
+            "leaderboard": {
+                "replyMsg": "you are using the command wrongly : `gokium leaderboard levels` or `gokium leaderboard messages`",
+                "level": "Level",
+                "title": "Leaderboard",
+                "description": "Server top 10.",
+                "use": "leaderboard [levels or messages]"
+            },
+            "ping": {
+                "apiLatency": "Discord API Latency",
+                "botLatency": "Bot latency",
+                "description": "Bot and API Latency.",
+                "use": "ping"
+            },
+            "pp": {
+                "avatarMsg": "here is avatar of",
+                "description": "User avatar.",
+                "use": "pp [@user *optional*]"
+            },
+            "rank": {
+                "title": "Stats",
+                "level": "Level",
+                "description": "User rank.",
+                "use": "rank [@user *optional*]"
+            },
+            "serverinfo": {
+                "name": "Name",
+                "owner": "Owner",
+                "members": "Members",
+                "humans": "Humans",
+                "roles": "Roles",
+                "region": "Region",
+                "createdAt": "Created at",
+                "description": "Server infos.",
+                "use": "serverinfo"
+            },
+            "snipe": {
+                "old": "Old ",
+                "new": "New",
+                "description": "Snipes the last deleted or edited message.",
+                "use": "snipe [edit *optional*]"
+            },
+            "status": {
+                "description": "User status.",
+                "use": "status [@user *optional*]"
+            },
+            "userinfo": {
+                "online": "Online",
+                "idle": "Idle",
+                "dnd": "Do not disturb",
+                "offline": "Offline/Invisible",
+                "title": "Infos", 
+                "playing": "Playing",
+                "roles": "Roles",
+                "createdAt": "Created at",
+                "joinedAt": "Joined at",
+                "description": "User infos.",
+                "use": "userinfo [@user *optional*]"
+            }
+        },
+        "moderation": {
+            "ban": {
+                "cantban": "You can't ban this user.",
+                "noreason": "No reason specified",
+                "beenbanned": "has been banned",
+                "bannedMsg": "You have been banned from",
+                "reason": "reason",
+                "description": "Ban a user.",
+                "use": "ban [@user] [reason *optional*]"
+            },
+            "clear": {
+                "msgDeleted": "message has been deleted",
+                "msgsDeleted": "messages has been deleted.",
+                "description": "Clear messages",
+                "use": "clear [@user *optional*] [amount]"
+            },
+            "cmdchannel": {
+                "deactivated": "command-only has been deactivated !",
+                "channeldoesntexist": "this channel doesn't exist..",
+                "activated": "command-only channel has been set on",
+                "description": "Set a command-only channel.",
+                "use": "cmdchannel [channel]"
+            }, 
+            "kick": {
+                "cantkick": "You can't kick this user.",
+                "noreason": "No reason specified",
+                "beenkicked": "has been kicked",
+                "kickedMsg": "You have been kicked from",
+                "reason": "reason",
+                "description": "Kick a user.",
+                "use": "kick [@user] [reason *optional*]"
+            },
+            "lang": {
+                "hasbeenset": "bot lang has been set on ",
+                "description": "Set the bot lang",
+                "use": "lang [mention a user, it will maybe works better ?]"
+            },
+            "logs": {
+                "deactivated": "logs has been deactivated !",
+                "channeldoesntexist": "this channel doesn't exist..",
+                "activated": "logs channel has been set on",
+                "description": "Set a logs channel",
+                "use": "logs [channel]"
+            },
+            "mute": {
+                "cantmuteuself": "You can't mute yourself",
+                "noreason": "No reason specified",
+                "alreadymuted": "This user is already muted",
+                "beenmuted": "has been muted",
+                "mutedMsg": "You have been mute from",
+                "reason": "reason",
+                "description": "Mute a user.",
+                "use": "mute [@user] [reason *optional*]"
+            },
+            "prefix": {
+                "newprefix": "Bot prefix is now",
+                "description": "Set the bot prefix.",
+                "use": "prefix [prefix]"
+            },
+            "rolecolor": {
+                "missid": "i need role id or name.",
+                "misscolor": "i need a HEX color.",
+                "roledoesntexist": "this role doesn't exist",
+                "colornotvalid": "color not valid",
+                "rolecolor": "role color",
+                "changedon": "has been changed to",
+                "description": "Change color of a role.",
+                "use": "rolecolor [role id or name]"
+            },
+            "unban": {
+                "noreason": "No reason specified",
+                "beenunban": "à été unban",
+                "reason": "reason",
+                "description": "Unban a user.",
+                "use": "unban [@user] [reason *optional*]"
+            },
+            "unmute": {
+                "noreason": "No reason specified",
+                "notmuted": "This user is not muted.",
+                "beenunmuted": "has been unmute",
+                "unmutedMsg": "You have been unmute from",
+                "reason": "reason",
+                "description": "Unmute a user.",
+                "use": "unmute [@user] [reason *optional*]"
             }
         }
     }

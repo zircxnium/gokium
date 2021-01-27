@@ -2,7 +2,7 @@
     "commands": {
         "fun": {
             "8ball": {
-                "replies": ["oui.", "non.", "j'en sais rien..", "demande moi ça plus tard la j'en ai rien a foutre 🙂", "si tu le dis", "j'en suis pas sur..", "sans un doute !", "bof."],
+                "replies": ["oui.", "non.", "j'en sais rien..", "demande moi ça plus tard la j'en ai rien a foutre 🙂", "si tu le dis", "j'en suis pas si sur..", "sans un doute !", "bof."],
                 "askaquestion": "pose moi une question avant et je te répondrais avec plaisir.",
                 "description": "Pose ta question et réponse tu-auras.",
                 "use": "8ball [question]"
@@ -146,7 +146,7 @@
                 "deaths": "Morts",
                 "lastUpdate": "Dernière update",
                 "description": "Stats de la COVID-19.",
-                "use": "covid [Pays *optionnel*]"
+                "use": "covid [pays *optionnel*]"
             },
             "help": {
                 "commands": "Commandes",
@@ -196,7 +196,7 @@
                 "use": "snipe [edit *optionnel*]"
             },
             "status": {
-                "description": "Status d'un utlisateur.",
+                "description": "Status d'un utilisateur.",
                 "use": "status [@utilisateur *optionnel*]"
             },
             "userinfo": {
@@ -209,7 +209,7 @@
                 "roles": "Rôles",
                 "createdAt": "Création",
                 "joinedAt": "À rejoint le serveur",
-                "description": "Infos d'un utlisateur.",
+                "description": "Infos d'un utilisateur.",
                 "use": "userinfo [@utilisateur *optionnel*]"
             }
         },
@@ -220,7 +220,7 @@
                 "beenbanned": "à été ban",
                 "bannedMsg": "T'as été ban de",
                 "reason": "Raison",
-                "description": "Bannir un utlisateur.",
+                "description": "Bannir un utilisateur.",
                 "use": "ban [@utilisateur] [raison *optionnel*]"
             },
             "clear": {
@@ -242,13 +242,13 @@
                 "beenkicked": "à été kick",
                 "kickedMsg": "T'as été kick de",
                 "reason": "Raison",
-                "description": "Kick un utlisateur.",
+                "description": "Kick un utilisateur.",
                 "use": "kick [@utilisateur] [raison *optionnel*]"
             },
             "lang": {
                 "hasbeenset": "la langue à été set sur",
                 "description": "Set la langue du bot.",
-                "use": "lang [language]"
+                "use": "lang [langue]"
             },
             "logs": {
                 "deactivated": "les logs ont été désactivés avec succès !",
@@ -286,7 +286,7 @@
                 "noreason": "Aucune raison spécifiée",
                 "beenunban": "à été unban",
                 "reason": "Raison",
-                "description": "Unban un utlisateur.",
+                "description": "Unban un utilisateur.",
                 "use": "unban [@utilisateur] [raison *optionnel*]"
             },
             "unmute": {

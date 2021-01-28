@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const util = require('util');
 
 exports.launch = async (client, message, args, lang) => {
   if (!message.member.hasPermission('MANAGE_ROLES')) return;

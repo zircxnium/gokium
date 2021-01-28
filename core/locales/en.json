@@ -168,7 +168,7 @@
                 "use": "ping"
             },
             "pp": {
-                "avatarMsg": "here is avatar of",
+                "avatarMsg": "here's <@%s> avatar",
                 "description": "User avatar.",
                 "use": "pp [@user *optional*]"
             },
@@ -217,9 +217,9 @@
             "ban": {
                 "cantban": "You can't ban this user.",
                 "noreason": "No reason specified",
-                "beenbanned": "has been banned",
-                "bannedMsg": "You have been banned from",
-                "reason": "reason",
+                "beenbanned": "%s has been banned",
+                "bannedmsg": "You have been banned from **%s** by %s!",
+                "reason": "Reason",
                 "description": "Ban a user.",
                 "use": "ban [@user] [reason *optional*]"
             },
@@ -239,9 +239,9 @@
             "kick": {
                 "cantkick": "You can't kick this user.",
                 "noreason": "No reason specified",
-                "beenkicked": "has been kicked",
-                "kickedMsg": "You have been kicked from",
-                "reason": "reason",
+                "beenkicked": "%s has been kicked",
+                "kickedmsg": "You have been kicked from **%s** by %s!",
+                "reason": "Reason",
                 "description": "Kick a user.",
                 "use": "kick [@user] [reason *optional*]"
             },
@@ -261,9 +261,9 @@
                 "cantmuteuself": "You can't mute yourself",
                 "noreason": "No reason specified",
                 "alreadymuted": "This user is already muted",
-                "beenmuted": "has been muted",
-                "mutedMsg": "You have been mute from",
-                "reason": "reason",
+                "beenmuted": "%s has been muted",
+                "mutedmsg": "You have been muted from **%s** by %s!",
+                "reason": "Reason",
                 "description": "Mute a user.",
                 "use": "mute [@user] [reason *optional*]"
             },
@@ -284,17 +284,17 @@
             },
             "unban": {
                 "noreason": "No reason specified",
-                "beenunban": "à été unban",
-                "reason": "reason",
+                "beenunban": "%s has been unbanned",
+                "reason": "Reason",
                 "description": "Unban a user.",
                 "use": "unban [@user] [reason *optional*]"
             },
             "unmute": {
                 "noreason": "No reason specified",
                 "notmuted": "This user is not muted.",
-                "beenunmuted": "has been unmute",
-                "unmutedMsg": "You have been unmute from",
-                "reason": "reason",
+                "beenunmuted": "%s has been unmuted",
+                "unmutedmsg": "You have been unmuted from **%s** by %s!",
+                "reason": "Reason",
                 "description": "Unmute a user.",
                 "use": "unmute [@user] [reason *optional*]"
             }

@@ -28,7 +28,7 @@ exports.launch = async (client, message, args, lang) => {
         });
       });
     } catch(err) {
-      console.log(er.stack);
+      console.log(err.stack);
     }
   }
 
@@ -38,14 +38,12 @@ exports.launch = async (client, message, args, lang) => {
   member.roles.add(muteRole.id).then(() => {
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${member.user.tag}__ ${lang.beenmuted}`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(util.format(lang.beenmuted, member.user.tag), member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setDescription(`**${lang.reason}** ${reason}`)
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
-    if (reason)
-      embed.setDescription(`**${lang.raeson}** ${reason}`);
-
-    if (!member.bot) member.send(`${lang.mutedMsg} **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**${lang.reason}** ${reason}` : ""}`);
+    if (!member.bot) member.send(`${util.format(lang.mutedmsg, message.guild.name, message.author.tag)}\n${reason ? `**${lang.reason}** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   })
 }

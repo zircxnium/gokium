@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const util = require('util');
 
 exports.launch = (client, message, args, lang) => {
   if(!message.member.hasPermission("MANAGE_ROLES")) return;
@@ -16,14 +17,12 @@ exports.launch = (client, message, args, lang) => {
   member.roles.remove(muteRole.id).then(() => {
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${member.user.tag}__ ${lang.beenunmuted}`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(util.format(lang.beenunmuted, member.user.tag), member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setDescription(`**${lang.reason}:** ${reason}`)
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
-    
-    if (reason)
-      embed.setDescription(`**${lang.reason}:** ${reason}`);
 
-    if(!member.bot) toMute.send(`${lang.unmutedMsg} **${message.guild.name}** par ${message.author.tag} !\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
+    if(!member.bot) member.send(`${util.format(lang.unmutedmsg, message.guild.name, message.author.tag)}\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   })
 }

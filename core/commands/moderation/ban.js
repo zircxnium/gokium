@@ -12,14 +12,14 @@ exports.launch = async (client, message, args, lang) => {
   await message.guild.members.ban(member.id, { reason }).then(() => {
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${member.user.tag}__ ${lang.beenbanned}`, member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(util.format(lang.beenbanned, member.user.tag), member.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
     if (reason)
       embed.setDescription(`**${lang.reason}:** ${reason}`);
 
-    if (!member.user.bot) user.send(`${lang.bannedMsg} **${message.guild.name}** par **${message.author.tag}** !\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
+    if (!member.user.bot) user.send(`${util.format(lang.bannedmsg, message.guild.name, message.author.tag)}\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   });
 }

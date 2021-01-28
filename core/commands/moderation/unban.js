@@ -14,16 +14,15 @@ exports.launch = (client, message, args, lang) => {
 
     const embed = new MessageEmbed()
       .setColor(0x2F3136)
-      .setAuthor(`__${banHandle.user.tag}__ ${lang.beenunban}`, banHandle.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setAuthor(util.format(lang.beenunban, banHandle.user.tag), banHandle.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }))
+      .setDescription(`**${lang.reason}:** ${reason}`)
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
-    if (reason)
-      embed.setDescription(`**${lang.reason}:** ${reason}`);
-
     message.guild.members.unban(banHandle.user.id, reason).then(() => {
-      message.delete();
-      message.channel.send(embed);
+      message.delete().then(() => {
+        message.channel.send(embed);
+      });
     });
   });
 }

@@ -168,7 +168,7 @@
                 "use": "ping"
             },
             "pp": {
-                "avatarMsg": "voici l'avatar de",
+                "avatarMsg": "voici l'avatar de <@%s>",
                 "description": "Avatar d'un utilisateur.",
                 "use": "pp [@utilisateur *optionnel*]"
             },
@@ -217,8 +217,8 @@
             "ban": {
                 "cantban": "Tu ne peux pas ban ce membre.",
                 "noreason": "Aucune raison spécifiée",
-                "beenbanned": "à été ban",
-                "bannedMsg": "T'as été ban de",
+                "beenbanned": "%s à été ban",
+                "bannedmsg": "T'as été ban de **%s** par %s !",
                 "reason": "Raison",
                 "description": "Bannir un utilisateur.",
                 "use": "ban [@utilisateur] [raison *optionnel*]"
@@ -239,8 +239,8 @@
             "kick": {
                 "cantkick": "Tu ne peux pas kick ce membre.",
                 "noreason": "Aucune raison spécifiée",
-                "beenkicked": "à été kick",
-                "kickedMsg": "T'as été kick de",
+                "beenkicked": "%s à été kick",
+                "kickedmsg": "T'as été kick de **%s** par %s !",
                 "reason": "Raison",
                 "description": "Kick un utilisateur.",
                 "use": "kick [@utilisateur] [raison *optionnel*]"
@@ -261,8 +261,8 @@
                 "cantmuteuself": "Tu ne peux pas te mute.",
                 "noreason": "Aucune raison spécifiée",
                 "alreadymuted": "Cet utilisateur est déjà mute.",
-                "beenmuted": "à été mute",
-                "mutedMsg": "T'as été mute de",
+                "beenmuted": "%s à été mute",
+                "mutedmsg": "T'as été mute de **%s** par %s !",
                 "reason": "Raison",
                 "description": "Mute un utilisateur.",
                 "use": "mute [@utilisateur] [raison *optionnel*]"
@@ -284,7 +284,7 @@
             },
             "unban": {
                 "noreason": "Aucune raison spécifiée",
-                "beenunban": "à été unban",
+                "beenunban": "%s à été unban",
                 "reason": "Raison",
                 "description": "Unban un utilisateur.",
                 "use": "unban [@utilisateur] [raison *optionnel*]"
@@ -292,8 +292,8 @@
             "unmute": {
                 "noreason": "Aucune raison spécifiée",
                 "notmuted": "Cet utilisateur n'est pas mute.",
-                "beenunmuted": "à été unmute",
-                "unmutedMsg": "T'as été unmute de",
+                "beenunmuted": " %s à été unmute",
+                "unmutedmsg": "T'as été unmute de **%s** par %s !",
                 "reason": "Raison",
                 "description": "Unmute un utilisateur.",
                 "use": "unmute [@utilisateur] [raison *optionnel*]"

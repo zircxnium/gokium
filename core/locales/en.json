@@ -157,7 +157,7 @@
             "leaderboard": {
                 "replyMsg": "you are using the command wrongly : `gokium leaderboard levels` or `gokium leaderboard messages`",
                 "level": "Level",
-                "title": "Leaderboard",
+                "title": "%s's Leaderboard",
                 "description": "Server top 10.",
                 "use": "leaderboard [levels or messages]"
             },
@@ -173,7 +173,7 @@
                 "use": "pp [@user *optional*]"
             },
             "rank": {
-                "title": "Stats",
+                "title": "%s's Stats",
                 "level": "Level",
                 "description": "User rank.",
                 "use": "rank [@user *optional*]"

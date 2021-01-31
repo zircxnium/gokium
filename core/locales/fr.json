@@ -157,7 +157,7 @@
             "leaderboard": {
                 "replyMsg": "utilise bien la commande : `gokium leaderboard levels` ou `gokium leaderboard messages`",
                 "level": "Niveau",
-                "title": "Leaderboard de",
+                "title": "Leaderboard de %s",
                 "description": "Top 10 du serveur.",
                 "use": "leaderboard [levels ou messages]"
             },
@@ -173,7 +173,7 @@
                 "use": "pp [@utilisateur *optionnel*]"
             },
             "rank": {
-                "title": "Stats de",
+                "title": "Stats de %s",
                 "level": "Niveau",
                 "description": "Rank d'un utilisateur.",
                 "use": "rank [@utilisateur *optionnel*]"

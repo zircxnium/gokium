@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const db = require('quick.db');
+const util = require('util');
 
 // to refactor
 exports.launch = async (client, message, args, lang) => {
@@ -26,7 +27,7 @@ exports.launch = async (client, message, args, lang) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setTitle(`${lang.title} **${message.guild.name}**`)
+    .setTitle(util.format(lang.title, `**${message.guild.name}**`))
     .setDescription(content)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

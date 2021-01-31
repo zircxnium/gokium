@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const db = require('quick.db');
+const util = require('util');
 
 exports.launch = (client, message, args, lang) => {
   const user = message.mentions.users.first() || message.author;
@@ -14,7 +15,7 @@ exports.launch = (client, message, args, lang) => {
 
   const embed = new MessageEmbed()
     .setColor(0x2F3136)
-    .setTitle(`${lang.title} **${user.username}**`)
+    .setTitle(util.format(lang.title, `**${user.username}**`))
     .setDescription(`**${lang.level}:** ${levelCount}\n**XP:** ${xpCount}/${nxtLvl}\n**Message(s):** ${messageCount}`)
     .setTimestamp()
     .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));

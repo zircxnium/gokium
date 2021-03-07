@@ -6,7 +6,6 @@ exports.launch = (client, message, args, lang) => {
   
   const userId = message.mentions.users.first() && message.mentions.users.first().id || args[0];
   if (!userId) return;
-  console.log(userId);
 
   const reason = args.slice(1).join(' ') || lang.noreason;
 

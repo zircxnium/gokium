@@ -16,7 +16,7 @@ exports.run = (client, member) => {
             utils.logs({
                 client,
                 title: "Quelqu'un à rejoint le serveur 😮",
-                message: `🙎‍♂️ **<@${member.id}>** à rejoint le serveur avec l'invite https://discord.gg/${invite.code} de <@${inviter.id}>\nInvitation utilisés **${invite.uses}x** depuis sa création`,
+                message: `🙎‍♂️ **<@${member.id}>** à rejoint le serveur avec l'invite https://discord.gg/${invite.code} de <@${inviter.id}>\nInvitation utilisée **${invite.uses}x** depuis sa création`,
                 guildId: member.guild.id,
                 initiator: member
             });

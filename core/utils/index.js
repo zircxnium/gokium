@@ -13,7 +13,6 @@ exports.formatString = str => str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " 
 
 exports.capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
-
 exports.getCommands = (guildId) => {
   exports.commandsCategories.forEach(category => {
     const getLang = db.get(`lang_${guildId}`);

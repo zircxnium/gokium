@@ -48,5 +48,8 @@ exports.logs = (data) => {
     .setFooter(`ID: ${data.initiator.id}`, data.client.user.displayAvatarURL({ format: 'png' || 'gif', dynamic: true }));
 
   if (data.newMessage) embed.addField("**Nouveau Message**", data.newMessage, true);
+  if (data.deletedBy) embed.addField("**Supprimé par**", data.deletedBy, false);
+  if (data.bannedBy) embed.addField("**Banni par**", data.bannedBy, true);
+  if (data.unbannedBy) embed.addField("**Unban par**", data.unbannedBy, true);
   data.client.channels.cache.get(logsChannel).send(embed);
 }

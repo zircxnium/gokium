@@ -282,6 +282,11 @@
                 "description": "Changer la couleur d'un rôle.",
                 "use": "rolecolor [id ou nom du rôle]"
             },
+            "sondage": {
+                "putamsg": "faut peut-être mettre un message, tu penses pas ?",
+                "description": "Faire un sondage avec deux possibilités de votes.",
+                "use": "sondage [message]"
+            },
             "unban": {
                 "noreason": "Aucune raison spécifiée",
                 "beenunban": "%s à été unban",

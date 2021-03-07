@@ -199,6 +199,11 @@
                 "description": "User status.",
                 "use": "status [@user *optional*]"
             },
+            "sondage": {
+                "putamsg": "write a message, it will maybe works better ?",
+                "description": "Make a sondage with two voting choices.",
+                "use": "sondage [message]"
+            },
             "userinfo": {
                 "online": "Online",
                 "idle": "Idle",

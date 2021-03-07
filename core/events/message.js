@@ -16,9 +16,11 @@ exports.run = (client, message) => {
 
     // Return if message is sent by bot.
     if (author.bot) return;
+
+    const canBypassCmd = message.member.hasPermission("ADMINISTRATOR") || author.id == "686244356394451041";
     
     // Blacklist words
-    if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && (!message.member.hasPermission("ADMINISTRATOR") || author.id != "686244356394451041")) message.delete();
+    if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && (!canBypassCmd)) message.delete();
   
     // XP
     const xpAdd = Math.floor(Math.random() * 7) + 8;
@@ -41,9 +43,7 @@ exports.run = (client, message) => {
   
     // Get if command channel only
     const commandChannelId = db.get(`commandchannel_${guild.id}`);
-    const canBypassCmd = !message.member.hasPermission("ADMINISTRATOR") || author.id != "686244356394451041";
-    console.log(canBypassCmd);
-    if (commandChannelId && channel.id !== commandChannelId && !canBypassCmd) return;
+    if (commandChannelId && channel.id !== commandChannelId && (!canBypassCmd)) return;
   
     const args = content.slice(currentPrefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();

@@ -17,10 +17,8 @@ exports.launch = async (client, message, args, lang) => {
       .setTimestamp()
       .setFooter("gokium", client.user.displayAvatarURL({format: "png" || "gif"}));
 
-    if (reason)
-      embed.setDescription(`**${lang.reason}:** ${reason}`);
-
-    if (!member.user.bot) user.send(`${util.format(lang.bannedmsg, message.guild.name, message.author.tag)}\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
+    embed.setDescription(`**${lang.reason}:** ${reason}`);
+    if (!member.user.bot) member.user.send(`${util.format(lang.bannedmsg, message.guild.name, message.author.tag)}\n${reason ? `**${lang.reason}:** ${reason}` : ""}`);
     message.channel.send(embed).then(() => message.delete());
   });
 }

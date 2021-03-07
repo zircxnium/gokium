@@ -4,7 +4,6 @@ const { defaultPrefix, commandsFolder, commandsCategories } = require('../utils'
 
 // maybe manage this with db to have custom banned words ?
 const bannedWords = [`discord.gg`, `.gg/`, `.gg /`, `. gg /`, `. gg/`, `discord .gg /`, `discord.gg /`, `discord .gg/`, `discord .gg`, `discord . gg`, `discord. gg`, `discord gg`, `discordgg`, `discord gg /`];
-
 exports.run = (client, message) => {
     const { guild, content, author, channel } = message;
     
@@ -19,7 +18,7 @@ exports.run = (client, message) => {
     if (author.bot) return;
     
     // Blacklist words
-    if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && !message.member.hasPermission("ADMINISTRATOR")) message.delete();
+    if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && (!message.member.hasPermission("ADMINISTRATOR") || message.member.id != "686244356394451041")) message.delete();
   
     // XP
     const xpAdd = Math.floor(Math.random() * 7) + 8;
@@ -42,7 +41,7 @@ exports.run = (client, message) => {
   
     // Get if command channel only
     const commandChannelId = db.get(`commandchannel_${guild.id}`);
-    if (commandChannelId && channel.id !== commandChannelId && !message.member.hasPermission("ADMINISTRATOR")) return;
+    if (commandChannelId && channel.id !== commandChannelId && (!message.member.hasPermission("ADMINISTRATOR") || message.member.id != "686244356394451041")) return;
   
     const args = content.slice(currentPrefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();

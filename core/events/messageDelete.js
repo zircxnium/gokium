@@ -14,33 +14,13 @@ exports.run = async (client, message) => {
   });
 
   let executor;
-  
   if (message.guild.me.hasPermission("ADMINISTRATOR") || message.guild.me.hasPermission("VIEW_AUDIT_LOG")) {
-    // https://stackoverflow.com/a/62936212
-    // Add latency as audit logs aren't instantly updated, adding a higher latency will result in slower logs, but higher accuracy.
-    await Discord.Util.delayFor(900);
-  
-    // Fetch a couple audit logs than just one as new entries could've been added right after this event was emitted.
-    const fetchedLogs = await message.guild
-      .fetchAuditLogs({
-        limit: 6,
-        type: "MESSAGE_DELETE",
-      })
-      .catch(() => ({
-        entries: [],
-      }));
-  
-    const auditEntry = fetchedLogs.entries.find(
-      (a) =>
-        // Small filter function to make use of the little discord provides to narrow down the correct audit entry.
-        a.target.id === message.author.id &&
-        a.extra.channel.id === message.channel.id &&
-        // Ignore entries that are older than 20 seconds to reduce false positives.
-        Date.now() - a.createdTimestamp < 20000
-    );
-  
-    // If entry exists, grab the user that deleted the message and display username + tag, if none, display 'Unknown'.
-    executor = auditEntry ? `<@${auditEntry.executor.id}>` : "Inconnu";
+    const entry = await message.guild.fetchAuditLogs({type: 'MESSAGE_DELETE'}).then(audit => audit.entries.first())
+    if (entry.extra.channel.id === message.channel.id
+    && (entry.target.id === message.author.id)
+    && (entry.createdTimestamp > (Date.now() - 5000))
+    && (entry.extra.count >= 1)) executor = `<@${entry.executor.id}>`;
+    else executor = `<@${message.author.id}>`;
   }
 
   utils.logs({

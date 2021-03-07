@@ -8,7 +8,8 @@ exports.run = async client => {
     await wait(1000);
     // Load all invites for all guilds and save them to the cache.
     client.guilds.cache.forEach(g => {
-        g.fetchInvites().then(guildInvites => this.invites[g.id] = guildInvites);
+        if (g.me.hasPermission("ADMINISTRATOR") || g.me.hasPermission("VIEW_AUDIT_LOG"))
+            g.fetchInvites().then(guildInvites => this.invites[g.id] = guildInvites);
     });
 
     client.user.setActivity("gokium help");

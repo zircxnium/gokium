@@ -131,12 +131,16 @@
             "ano": {
                 "author": "Anonymous",
                 "description": "Send an anonymous message.",
-                "use": "ano"
+                "use": "ano [message]"
             },
             "botinvite": {
                 "replyMsg": "i send you that in your dm !",
                 "description": "`gokium` bot invite.",
                 "use": "botinvite"
+            },
+            "btc": {
+                "description": "Send the current bitcoin price in the choosen currency.",
+                "use": "btc [currency]"
             },
             "covid": {
                 "title": "Statistics",

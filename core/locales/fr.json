@@ -131,12 +131,16 @@
             "ano": {
                 "author": "Anonyme",
                 "description": "Message anonyme.",
-                "use": "ano"
+                "use": "ano [message]"
             },
             "botinvite": {
                 "replyMsg": "je t'envoie ça en dm !",
                 "description": "Invitation du bot `gokium`.",
                 "use": "botinvite"
+            },
+            "btc": {
+                "description": "Renvoie le prix du Bitcoin",
+                "use": "btc [devise]"
             },
             "covid": {
                 "title": "Statistiques",
@@ -222,6 +226,10 @@
                 "reason": "Raison",
                 "description": "Bannir un utilisateur.",
                 "use": "ban [@utilisateur] [raison *optionnel*]"
+            },
+            "embed": {
+                "reason": "",
+                "use": ""
             },
             "clear": {
                 "msgDeleted": "message à été supprimé.",

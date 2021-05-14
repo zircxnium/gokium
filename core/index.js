@@ -1,10 +1,10 @@
 const discord = require('discord.js');
-const client = new discord.Client();
+const client = new discord.Client({ partials: ['MESSAGE', 'REACTION'] });
 const fs = require('fs');
 require('dotenv').config();
 
 fs.readdir(__dirname + '/events', (err, files) => {
-  if(err) throw err;
+  if (err) throw err;
 
   files.forEach(file => {
     const eventName = file.replace('.js', '');

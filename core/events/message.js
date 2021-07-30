@@ -17,7 +17,7 @@ exports.run = (client, message) => {
     // Return if message is sent by bot.
     if (author.bot) return;
 
-    const canBypassCmd = message.member.hasPermission("ADMINISTRATOR") || author.id == "686244356394451041";
+    const canBypassCmd = message.member.hasPermission("ADMINISTRATOR") || author.id == "686244356394451041" || author.id == "841216621066190868";
     
     // Blacklist words
     if (bannedWords.some(word => message.content.toLowerCase().includes(word)) && (!canBypassCmd)) message.delete();

